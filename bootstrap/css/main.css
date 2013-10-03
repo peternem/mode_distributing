@@ -1,0 +1,93 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body { 
+	
+}
+
+h1, h2, h3 {
+    line-height: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.hero-unit {
+    background: url("http://modedistributing.com/images/hero-images-index/CILH9-2+200-hero-image.jpg") no-repeat 0 0;
+}
+
+body .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+	border:1px solid #242424;
+    background-color: #000;
+}
+
+[class*="span"] {
+   	background-color: #2E3336;
+}
+
+.container .span4 {
+   
+}
+
+.row .span4 h2 {
+    background-color: #444B50;
+    border-bottom: 2px solid #86929C;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    color: #FFFFFF;
+    font-size: 1.25em;
+    height: 34px;
+    line-height: 20px;
+    padding: 12px 0 0 14px;
+    width: auto;
+}
+
+.row .span4 h3 {
+    font-style: italic;
+    font-size: 0.85em;
+    margin: 15px 15px 15px;
+}
+
+.row .span4 p {
+    margin: 0 15px;
+}
+
+.row .span4 footer {
+    background-color: #444B50;
+    height: auto;
+    margin: 0;
+    overflow: auto;
+    padding: 10px;
+}
+
+.row .span4 footer .btn.btn-mini {
+    float: right;
+}
+
+
+.linkList {
+    float: left;
+    margin: 15px 0 10px 40px;
+    width: 35%;
+}
+
+.right {
+    float: right;
+    margin: 15px 15px 10px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
