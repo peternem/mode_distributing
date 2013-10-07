@@ -35,20 +35,16 @@ $(document).ready(function(){
 	} else {
 		$('#hide_btn').hide();
 		$('#index_main_panel').delay(1000).animate({"top": "272px", "height":"218px"}, 500, function(){
-			$('#hide_btn').show()
+			$('#hide_btn').show();
 		});
 		
 		function panel_close (){
 			$('#index_main_panel').animate({"top": "445px","height":"45px"}, 500);
-			
 		}
 				
 		function panel_open (){
 			$('#index_main_panel').animate({ "top": "272px", "height":"218px"}, 500);
 		}
-		
-		//$('#index_main_panel').bind('click', panel_open);
-		//$('#index_main_panel').bind('mouseleave',  panel_close);
 		
 		$('#index_main_panel, #hide_btn').toggle(function(){
 			panel_close();

@@ -1,0 +1,244 @@
+/***************************************************
+ * LESS Variables Section formating
+ **************************************************/
+/***************************************************
+ * LESS Variables Section formating
+ **************************************************/
+@font-face {
+  font-family: 'HELVNR';
+  font-weight: bold;
+  src: url("../fonts/walkway_black-webfont.eot");
+}
+@font-face {
+  font-family: 'HELVNR';
+  font-weight: 700;
+  src: url("../fonts/HELVNR__.TTF");
+}
+@font-face {
+  font-family: 'HELVNB';
+  src: url("../fonts/HELVNB__.TTF");
+}
+@font-face {
+  font-family: 'HELVNBI';
+  font-weight: 700;
+  src: url("../fonts/HELVNBI_.TTF");
+}
+h1 {
+  font-family: 'HELVNB', Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+h2 {
+  font-family: 'HELVNBI', Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  letter-spacing: 2px;
+  word-spacing: 0;
+}
+h3 {
+  font-family: 'HELVNB', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+h4 {
+  font-family: 'HELVNBI', Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+}
+h5 {
+  font-family: 'HELVNB', Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+}
+p {
+  font-family: 'HELVNR', Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+  line-height: 1.4em;
+}
+li {
+  font-family: 'HELVNR', Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+  line-height: 1.4em;
+}
+a {
+  text-decoration: none;
+  font-family: 'HELVNB', Arial, Helvetica, sans-serif;
+}
+a:hover {
+  color: #1C97C1;
+}
+/***************************************************
+ * CONTAINER Section formating
+ **************************************************/
+body {
+  background-color: #161616;
+  color: #000000;
+  font-family: 'HELVNR', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.container {
+  position: relative;
+}
+.container .short {
+  background-color: #ffffff;
+  border-bottom: 4px solid #86929C;
+  min-height: 183px;
+  padding: 1em;
+  width: 580px;
+}
+.container .short h1,
+.container .short h2,
+.container .short h3,
+.container .short h4,
+.container .short p {
+  margin-top: 0;
+  color: #000000;
+}
+.container .short.mainCopyBrand {
+  height: 504px;
+  width: 467px;
+}
+.container .img-pull-right {
+  float: right;
+  border-bottom: 4px solid #86929C;
+}
+.indexTitle {
+  background-color: #D1D2D4;
+  border: 1px solid #FFFFFF;
+  bottom: 16px;
+  box-shadow: 1px 1px 5px #333333;
+  height: 250px;
+  left: 16px;
+  margin-bottom: 0;
+  opacity: 0.75;
+  overflow: hidden;
+  padding: 1em;
+  position: absolute;
+  width: 615px;
+  z-index: 400;
+}
+.indexTitle h1 {
+  margin-top: 0;
+}
+/***************************************************
+ * QUICkLINKS Section formating
+ **************************************************/
+.quickLinks {
+  clear: both;
+  overflow: auto;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+.quickLinks .breadcrumb {
+  background-color: #444B50;
+  border-radius: 0;
+  border-bottom: 4px solid #86929C;
+  list-style: none outside none;
+  margin-bottom: 0;
+  padding: 0 1em;
+}
+.quickLinks .breadcrumb > li {
+  font-size: 0.725em;
+  line-height: 22px;
+  vertical-align: top;
+}
+/***************************************************
+ * SECTION Column Grid formating 
+ ***************************************************/
+section.col-xs-4 {
+  background-color: #2e3336;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  float: left;
+  height: 450px;
+  margin: 0 11px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 300px;
+}
+section.col-xs-4 .imageTabBox {
+  background-color: #2E2326;
+  border-bottom: 2px solid #86929C;
+  height: 150px;
+  width: 300px;
+}
+section.col-xs-4 h3 {
+  background-color: #444b50;
+  border-bottom: 2px solid #86929C;
+  color: #FFFFFF;
+  font-size: 1.25em;
+  height: 45px;
+  line-height: 19px;
+  margin: 0;
+  padding: 0.652em 0 0 1em;
+  width: auto;
+}
+section.col-xs-4 h3:hover {
+  background-color: #525a60;
+}
+section.col-xs-4 h4,
+section.col-xs-4 p {
+  color: #ffffff;
+}
+section.col-xs-4 .main-content {
+  padding: 0 1em;
+}
+section.col-xs-4 .subBox {
+  background-color: #bdcedc;
+}
+section.col-xs-4 .subBox.top {
+  background-color: #bdcedc;
+  top: 0;
+  position: absolute;
+}
+section.col-xs-4 .subBox.bottom {
+  bottom: 0;
+  padding-bottom: 1.65em;
+  position: absolute;
+}
+section.col-xs-4 .subBox h3 {
+  background-color: #bdcedc;
+  color: #0095C0;
+}
+section.col-xs-4 .subBox a h3:hover {
+  background-color: #a2b6c6;
+}
+section.col-xs-4 footer {
+  background-color: #444b50;
+  bottom: 0;
+  clear: both;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  padding: 0.325em 1em;
+}
+section.col-xs-4 footer a {
+  float: right;
+  color: #FF9900;
+  font-size: 0.75em;
+}
+section.col-xs-4 footer a > span:first-child {
+  margin-right: 0.425em;
+}
+.col-xs-4.mid {
+  background-color: #000;
+  border-color: #000;
+}
+/***************************************************
+ * LINKLIST formating 
+ ***************************************************/
+.linkList {
+  float: left;
+  padding: 0;
+}
+.linkList.right {
+  float: right;
+}
+.linkList li {
+  list-style: none outside none;
+  margin: 0 0 5px;
+  font-size: 0.75em;
+  color: #FFFFFF;
+}
+.linkList li a {
+  color: #FFFFFF;
+}

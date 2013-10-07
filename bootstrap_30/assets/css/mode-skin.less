@@ -1,0 +1,266 @@
+/***************************************************
+ * LESS Variables Section formating
+ **************************************************/
+@body-bground: #161616;
+@container-bground: #000000;
+@grid-bground: #2E3336;
+@grid-bground-alt: #BDCEDC;
+@grid-bground-header: #444B50;
+@grid-bground-footer: #444B50;
+@font-ie: 'HELVNR';
+@font-regular: 'HELVNR';
+@font-bold: 'HELVNB';
+@font-bold-ital: 'HELVNBI';
+
+
+/***************************************************
+ * LESS Variables Section formating
+ **************************************************/
+
+@font-face {
+  font-family: @font-ie;
+  font-weight: bold;
+  src: url("../fonts/walkway_black-webfont.eot");
+}
+
+@font-face {
+  font-family: @font-regular;
+  font-weight: 700;
+  src: url("../fonts/HELVNR__.TTF");
+}
+
+@font-face {
+  font-family: @font-bold;
+  src: url("../fonts/HELVNB__.TTF");
+}
+
+@font-face {
+  font-family: @font-bold-ital;
+  font-weight: 700;
+  src: url("../fonts/HELVNBI_.TTF");
+}
+
+h1 {
+  font-family: @font-bold, Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+h2 {
+  font-family: @font-bold-ital, Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  letter-spacing: 2px;
+  word-spacing: 0;
+}
+h3 {
+  font-family: @font-bold, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+h4 {
+  font-family: @font-bold-ital, Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+}
+h5 {
+  font-family: @font-bold, Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+}
+
+p {
+  font-family: @font-regular, Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+  line-height: 1.4em;
+}
+
+li {
+  font-family: @font-regular, Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+  line-height: 1.4em;
+}
+
+a {
+  text-decoration: none;
+  font-family: @font-bold, Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+  color: #1C97C1;
+}
+
+/***************************************************
+ * CONTAINER Section formating
+ **************************************************/
+
+body {
+  background-color: @body-bground;
+  color: #000000;
+  font-family: @font-regular, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.container{
+  position:relative;
+  .short {
+    background-color:#ffffff;
+    border-bottom: 4px solid #86929C;
+    min-height: 183px;
+    padding: 1em;
+    width: 580px;
+    h1, h2, h3, h4, p {
+      margin-top:0;
+      color:#000000;
+    }
+  }
+  .short.mainCopyBrand {
+    height: 504px;
+    width: 467px;
+  }
+  .img-pull-right {
+      float:right;
+      border-bottom: 4px solid #86929C;
+  }
+}
+.indexTitle {
+    background-color: #D1D2D4;
+    border: 1px solid #FFFFFF;
+    bottom: 16px;
+    box-shadow: 1px 1px 5px #333333;
+    height: 250px;
+    left: 16px;
+    margin-bottom: 0;
+    opacity: 0.75;
+    overflow: hidden;
+    padding: 1em;
+    position: absolute;
+    width: 615px;
+    z-index: 400;
+    h1 {
+      margin-top:0;
+    }
+}
+/***************************************************
+ * QUICkLINKS Section formating
+ **************************************************/
+.quickLinks {
+  clear: both;
+  overflow: auto;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  .breadcrumb {
+    background-color: #444B50;
+    border-radius: 0;
+    border-bottom: 4px solid #86929C;
+    list-style: none outside none;
+    margin-bottom: 0;
+    padding: 0 1em;
+    > li {
+      font-size: 0.725em;
+      line-height: 22px;
+      vertical-align: top;
+    }
+  }
+  
+}
+/***************************************************
+ * SECTION Column Grid formating 
+ ***************************************************/
+section.col-xs-4 {
+  background-color: @grid-bground;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  float: left;
+  height: 450px;
+  margin: 0 11px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 300px;
+   .imageTabBox {
+    background-color: #2E2326;
+    border-bottom: 2px solid #86929C;
+    height: 150px;
+    width: 300px;
+   }
+   h3 {
+    background-color: @grid-bground-header;
+    border-bottom: 2px solid #86929C;
+    color: #FFFFFF;
+    font-size: 1.25em;
+    height: 45px;
+    line-height: 19px;
+    margin: 0;
+    padding: 0.652em 0 0 1em;
+    width: auto;
+  }
+  h3:hover {
+    background-color:#525a60;
+  }
+
+  h4, p {
+    color:#ffffff;
+  }
+  .main-content {
+    padding: 0 1em;
+  }
+  .subBox {
+    background-color: @grid-bground-alt;
+  }
+  .subBox.top {
+    background-color: @grid-bground-alt;
+    top: 0;
+    position: absolute;
+  }
+  .subBox.bottom {
+    bottom: 0;
+    padding-bottom: 1.65em;
+    position: absolute;
+  }
+  .subBox h3 {
+    background-color: @grid-bground-alt;
+    color: #0095C0;
+  }
+  .subBox a h3:hover {
+    background-color:#a2b6c6;
+  }
+  footer {
+    background-color: @grid-bground-footer;
+    bottom: 0;
+    clear: both;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    padding: 0.325em 1em;
+    a {
+      float: right;
+      color: #FF9900;
+      font-size: 0.75em;
+    }
+    a > span:first-child {
+      margin-right:0.425em;
+    }
+  }
+}
+.col-xs-4.mid {
+  background-color: #000;
+  border-color: #000;
+}
+
+/***************************************************
+ * LINKLIST formating 
+ ***************************************************/
+
+.linkList {
+  float: left;
+  padding: 0;
+}
+.linkList.right {
+  float: right;
+}
+.linkList li {
+  list-style: none outside none;
+  margin: 0 0 5px;
+  font-size: 0.75em;
+  color: #FFFFFF;
+}
+.linkList li a{
+  color: #FFFFFF;
+}

@@ -1,0 +1,216 @@
+/*******************************************
+ * CYCLE SLIDESHOW GLOBAL VARIABLES 
+ ********************************************/
+@pager-bground-color: #BDCEDC;
+@pager-bground-color-active: #0095C0;
+@pager-border-color: #ffffff;
+@pager-border-width: 1px solid;
+@pager-font-color: #161616;
+@pager-font-color-active: #FFFFFF;
+
+/*******************************************
+ * CYCLE-Pager Formating 
+ ********************************************/
+.cycle-pager.index-slideshow{
+  text-align: center;
+  width: 100%;
+  z-index: 500;
+  padding: 0.75em;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+  height: 3em;
+}
+
+.cycle-pager.prod-slideshow {
+  bottom: 1em;
+  left: 1em;
+  overflow: hidden;
+  padding: 0.75em;
+  position: absolute;
+  text-align: left;
+  z-index: 500;
+}
+ 
+.cycle-pager {
+  a {
+    background: @pager-bground-color;
+    border: @pager-border-width @pager-border-color;
+    color: @pager-font-color;
+    cursor: pointer;
+    font-family: arial;
+    font-size:0.725em;
+    line-height: 10px;
+    padding: 1em;
+    display: inline-block;
+    margin-left:0.625em;
+  }
+  span {
+    font-family: arial;
+    font-size: 50px;
+    line-height:33px;
+    width: 0.652em;
+    height: 0.652em;
+    display: inline-block;
+    color: #ddd;
+    cursor: pointer;
+  }
+   > * {
+    cursor: pointer;
+  }
+   a.cycle-pager-active {
+    background: @pager-bground-color-active;
+    border: @pager-border-width @pager-border-color;
+    color: @pager-font-color-active;
+    padding: 1em;
+  }
+  span.cycle-pager-active {
+    color: #D69746;
+  }
+}
+
+/*******************************************
+ * slideshow-controls Formating 
+ ********************************************/
+.slideshow-controls {
+  bottom: 1em;
+  position: absolute;
+  right: 3em;
+  z-index: 1000;
+  .glyphicon {
+    margin: 0 0.325em;
+    font-size: 0.825em;
+  }
+  .cycle-slideshow .glyphicon {
+    margin: 0 0.325em;
+    font-size: 0.825em;
+  }
+}
+
+/*******************************************
+ * slideshow Formating 
+ ********************************************/
+.cycle-slideshow, .cycle-slideshow * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cycle-slideshow {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  float: left;
+  background: url('../../assets/imgs/spinner/spinner.gif') 50% 50% no-repeat #ccc;
+  img {
+    /*
+     some of these styles will be set by the plugin (by default) but setting them here
+     helps avoid flash-of-unstyled-content
+     */
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    padding: 0;
+    display: block;
+    img:first-child {
+      position: static;
+      z-index: 100;
+    }
+  }
+}
+
+/* caption */
+.cycle-caption {
+  position: absolute;
+  color: white;
+  bottom: 15px;
+  right: 15px;
+  z-index: 700;
+  font-size: 0.625em;
+}
+
+/* overlay */
+.cycle-overlay {
+  font-size: 0.625em;
+  width: 100%;
+  background: #428BCA;
+  color: #FFFFFF;
+  font-weight: 400;
+  padding: 1em;
+}
+
+/*********************************************
+ *  pause prev / next links 
+ * ******************************************/
+
+.cycle-paused:after {
+  content: 'Paused';
+  color: #FFFFFF;
+  background: #000000;
+  border-radius: 4px;
+  font-size: 0.525em;
+  filter: alpha(opacity=50);
+  left: 1em;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  opacity: .5;
+  padding: 6px 12px;
+  position: absolute;
+  top: 1em;
+  z-index: 1000;
+}
+.cycle-prev, .cycle-next {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 800;
+  height: 100%;
+  cursor: pointer;
+  display: none;
+}
+.cycle-prev {
+  left: 0;
+  background: url('../../assets/imgs/icons/left.png') 50% 50% no-repeat;
+}
+.cycle-next {
+  right: 0;
+  background: url('../../assets/imgs/icons/right.png') 50% 50% no-repeat;
+}
+.cycle-prev:hover, .cycle-next:hover {
+  opacity: .7;
+  filter: alpha(opacity=70)
+}
+
+.disabled {
+  opacity: .5;
+  filter: alpha(opacity=50);
+}
+
+#pauseToggle {
+  right: 1em;
+  position: absolute;
+  top: 1em;
+  z-index: 800;
+}
+
+/*
+ media queries
+ some style overrides to make things more pleasant on mobile devices
+ */
+
+@media only screen and (max-width: 480px) , only screen and (max-device-width: 480px) {
+  .cycle-slideshow {
+    width: 200px;
+  }
+  .cycle-overlay {
+    padding: 4px
+  }
+  .cycle-caption {
+    bottom: 4px;
+    right: 4px
+  }
+}
