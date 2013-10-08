@@ -1,5 +1,7 @@
 <?php 
 /*****  GLOBAL FUNCTIONS *****/
+$username = "";
+$password = "";
 
 $host = $_SERVER['HTTP_HOST'];
 $self = $_SERVER['PHP_SELF'];
