@@ -55,4 +55,8 @@ $(document).ready(function() {
 	/**** BEGIN _ Index.php - Slidedown panel overlay animation ***********/
 	/**************************************************************************************/
 	
+	$("#hide_btn").click(function() {
+		//$("#index_main_panel").toggle("fast");
+		$('#index_main_panel').delay(900).animate({"bottom": "16px", "height":"55px"}, 500);
+	});
 }); 
