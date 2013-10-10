@@ -1,4 +1,5 @@
-<?php include 'includes/sitewide-globals.php'; ?>
+<?php include 'includes/sitewide-globals.php'; 
+ $promopage = 'promotions';?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>

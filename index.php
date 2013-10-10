@@ -1,6 +1,6 @@
 <?php
 include 'includes/sitewide-globals.php';
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,15 +27,14 @@ include 'includes/sitewide-globals.php';
         <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
         <script type="text/javascript" src="js/sitewide-scripts-slideshow.js"></script>
         <?php include_once("includes/analyticstracking.php") ?>
+
+
     </head>
     <body>
         <div id="wrapper">
             <?php
 			include 'includes/sitewide-header.php';
             ?>
-            <div id="bannerPromo" class="modal-dialog">
-                Modal Promo
-            </div>
             <div id="quickLinks">
                 &nbsp;
             </div>

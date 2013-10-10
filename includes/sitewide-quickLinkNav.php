@@ -4,29 +4,36 @@
 			<span>Home</span><span class="angleQuoteMark">&raquo;</span>
 		</a>
 	</li>
-	<?php if(($nameX =='Dealer Locator')) { ?>
+	
+	<?php if(($nameX == 'Aga') ||($nameX == 'Heartland') || ($nameX == 'American Range') || ($nameX == 'Vent-A-Hood')) { ?>
 	<li>
-		<a href="dealer_locator.php"title=""><span>Dealer Locator</span></a>
+		<a href="products.php"title=""><span>Products</span><span class="angleQuoteMark">&raquo;</span><span></a>
 	</li>
 	<?php } ?>
-	<?php if(($nameX =='Products') || ($brandpage == 'brandPage') || ($subProductPage == 'subProdPage')) { ?>
+	
+	<?php if(($nameX == 'Marvel Products')) { ?>
 	<li>
-		<a href="products.php"title=""><span>Products</span></a>
+		<a href="products.php"title=""><span>Products</span><span class="angleQuoteMark">&raquo;</span></a>
 	</li>
 	<?php } ?>
-	<?php if(($marvelSubProdPage == 'marvelSubProdPg')) { ?>
+	
+	<?php if(($nameX == 'Marvel') ||($nameX == 'Marvel Professional') || ($nameX == 'Marvel Outdoor')) { ?>
 	<li>
-		<a href="marvel_products.php"title=""><span class="angleQuoteMark">&raquo;</span><span>Marvel Products</span></a>
+		<a href="products.php"title=""><span>Products</span><span class="angleQuoteMark">&raquo;</span></a>
+	</li>
+	<li>
+		<a href="marvel_products.php"title=""><span>Marvel Products</span><span class="angleQuoteMark">&raquo;</span></a>
 	</li>
 	<?php } ?>
-	<?php if(($marvelSubProdPage == 'marvelSubProdPg')) { ?>
+	
+	<?php if($nameX == 'Promotions') { ?>
 	<li>
-		<a href="marvel_products.php"title=""><span class="angleQuoteMark">&raquo;</span><span>Marvel Products</span></a>
+		<a href="<?php echo $filename ?>" title=""><span><?php echo $nameX ?></span></a>
 	</li>
-	<?php } ?>
-	<?php if($brandpage == 'brandPage') { ?>
+	
+	<?php } else {?>
 	<li>
-		<a href="<? echo $filename ?>" title=""><span class="angleQuoteMark">&raquo;</span><span><?php echo $nameX ?></span></a>
+		<a href="<?php echo $filename ?>" title=""><span><?php echo $nameX ?></span></a>
 	</li>
-	<?php } ?>
+	<?php }?>
 </ul>

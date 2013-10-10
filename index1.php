@@ -1,6 +1,6 @@
 <?php
 include 'includes/sitewide-globals.php';
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,27 +12,95 @@ include 'includes/sitewide-globals.php';
         <meta content="stoves, cooking ranges, kitchen refridgerators, under counter refridgerators, outdoor patio, outdoor patio refridgerators"/>
 
         <?php
-	include 'includes/sitewide-metaTags.php';
- ?>
+		include 'includes/sitewide-metaTags.php';
+        ?>
         <link href="css/mode-style1.css" rel="stylesheet" type="text/css" />
         <link href="css/main_navigation_style.css" rel="stylesheet" type="text/css" />
         <!--[if lt IE 9]>
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <?php
-			include 'includes/sitewide-scripts.php';
- ?>
+		include 'includes/sitewide-scripts.php';
+        ?>
         <script type="text/javascript" src="js/chili-1.7.pack.js"></script>
         <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
         <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
         <script type="text/javascript" src="js/sitewide-scripts-slideshow.js"></script>
         <?php include_once("includes/analyticstracking.php") ?>
+        <style type="text/css" media="all">
+			#wrapper {
+				position: relative;
+			}
+			#bannerPromo {
+				display: none;
+				position: absolute;
+				background-color: #161616;
+				border: 1px solid #444B50;
+				left: 50%;
+				top: 20%;
+				margin-left: -300px;
+				margin-top: -200px;
+				width: 600px;
+				height: 440px;
+				z-index: 1000;
+				-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+				-moz-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+				box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+			}
+			#bannerPromo .banner-header {
+				text-align: left;
+				font-weight: bold;
+				margin: 10px;
+			}
+			#bannerPromo .close-btn {
+				background-color: #000000;
+				background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMtJREFUeNpi+P//PwMU9wJxPhIfF64D4jkwPkyw6z8C4DOkAkndBJgB7f8xATZDSrGo62ViYGB4x4AJJgBxPhK/CIi7sKh7DTO96D92kA/F2EAFchiAcM5/4kEFeiDCcBopmrEZQMiQCnT1TFgCRoIBN/iLIYJmYiMlXmghIRCr0Q3ApRkUM5n4DMGVEv9D0wbMAlxpoQ4UiDxYAqsSiPuQ+BOBuBiLuo8wGyYjm0pkZgLnFxaoSblA/B2Km/BEYwcQs4FthriKASDAACO1tJCWVmonAAAAAElFTkSuQmCC);
+				background-position: 2px 2px;
+				background-repeat: no-repeat;
+				border: 1px solid #444B50;
+				border-radius: 3px;
+				height: 20px;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				width: 20px;
+			}
+
+			#bannerPromo .close-btn:hover {
+				background-color: #1D96C1;
+				border: 1px solid #1D96C1;
+			}
+        </style>
+        <script type="text/javascript">
+			$(document).ready(function() {
+				var popDelay = 1000;
+				var fadeSpeed = 600;
+				var timeOut = 15000;
+
+				$("#bannerPromo").delay(popDelay).fadeIn(fadeSpeed);
+
+				setTimeout(function() {
+					$("#bannerPromo").fadeOut(fadeSpeed);
+				}, timeOut);
+
+				$(".close-btn").click(function() {
+					$('#bannerPromo').fadeOut(fadeSpeed);
+				});
+			});
+        </script>
     </head>
     <body>
         <div id="wrapper">
+        	<div id="bannerPromo" class="modal-dialog">
+                <div class="banner-header">
+                    Mode Special Anouncement
+                </div>
+                <div class="close-btn" alt="X" title="Close"></div>
+                <img src="images/MODE_BlackWhite_4X6.jpg" alt="NKBA Black and White Holliday Event" />
+            </div>
             <?php
 			include 'includes/sitewide-header.php';
- ?>
+            ?>
             <div id="quickLinks">
                 &nbsp;
             </div>
@@ -63,23 +131,43 @@ include 'includes/sitewide-globals.php';
                 </div>
             </article>
             <article id="mainContent">
-                <section class="indexbox1">
+            	<section class="indexbox1">
+                    <a href="products.php" title="Products"><h3>Products</h3></a>
+                    <a title="Visit Products" href="products.php" class="imageLink rollButton"><img src="images/rollover/product-btn.png" alt="" width="90" height="120" class="imageTabBox1" /></a>
+                    <h4>Luxurious Home Appliances to meet the needs of your home.</h4>
+                    <p> Our product offering ranges from stove, range hoods and exhaust fans and refridgerators for wine or beer. </p>
+                    <ul class="linkList">
+                        <li><a href="aga.php">AGA</a></li>
+                        <li><a href="american_range.php">American Range</a></li>
+                        <li><a href="heartland.php">Heartland</a></li>
+                        <li><a href="marvel.php">Marvel</a></li>
+                    </ul>
+                    <ul class="linkList right">
+                        <li><a href="marvel_outdoor.php">Marvel Outdoor</a></li>
+                        <li><a href="marvel_professional.php">Marvel Professional</a></li>
+                        <li><a href="vent-a-hood.php">Vent-A-Hood</a></li>
+                    </ul>
+                    <div class="moreInfoDiv">
+                        <a href="products.php"><span>Learn More</span><img src="images/icons/learnMoreArrow.png" alt="&raquo;" /></a>
+                    </div>
+                </section>
+                <!-- <section class="indexbox1">
                     <a href="products.php" title="Products"><h3>Twitter</h3></a>
 
                     <a class="twitter-timeline"width="300" height="401"  data-theme="dark"  href="https://twitter.com/Mode_Dist"  data-widget-id="343869569611476992">Tweets by @Mode_Dist</a>
                     <script>
-						! function(d, s, id) {
-							var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-							if (!d.getElementById(id)) {
-								js = d.createElement(s);
-								js.id = id;
-								js.src = p + "://platform.twitter.com/widgets.js";
-								fjs.parentNode.insertBefore(js, fjs);
-							}
-						}(document, "script", "twitter-wjs");
+						// ! function(d, s, id) {
+							// var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+							// if (!d.getElementById(id)) {
+								// js = d.createElement(s);
+								// js.id = id;
+								// js.src = p + "://platform.twitter.com/widgets.js";
+								// fjs.parentNode.insertBefore(js, fjs);
+							// }
+						// }(document, "script", "twitter-wjs");
                     </script>
 
-                </section>
+                </section> -->
                 <section class="indexbox2">
                     <div class="subBox clearfix">
                         <a href="new_products.php"><h3>New Products</h3></a>
@@ -116,10 +204,10 @@ include 'includes/sitewide-globals.php';
         <footer>
             <?php
 			include 'includes/sitewide-footer.php';
- ?>
+            ?>
         </footer>
         <?php
-			include 'includes/sitewide-copyright.php';
- ?>
+		include 'includes/sitewide-copyright.php';
+        ?>
     </body>
 </html>

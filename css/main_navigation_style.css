@@ -83,6 +83,7 @@ nav {
     font-size: 0.60em;
     font-weight: bold;
     text-decoration: none;
+    float: left;
 }
 #jsddm li a:hover, #contactLink li a:hover, #qLink li a:hover, #jsddm2 li a:hover {
 	/*background: #86929C;*/
