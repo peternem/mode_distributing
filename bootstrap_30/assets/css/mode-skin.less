@@ -10,6 +10,7 @@
 @grid-bground: #2E3336;
 @grid-bground-alt: #BDCEDC;
 @grid-bground-header: #444B50;
+@grid-bground-quick-links: #444B50;
 @grid-bground-footer: #444B50;
 @font-regular: 'helveticaneueroman';
 
@@ -176,6 +177,31 @@ body {
 }
 
 /***************************************************
+ * QUICkLINKS Section formating
+ **************************************************/
+.quickLinks {
+  clear: both;
+  overflow: auto;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  .breadcrumb {
+    background-color: @grid-bground-quick-links;
+    border-radius: 0;
+    border-bottom: @border-width-thick @border-color;
+    list-style: none outside none;
+    margin-bottom: 0;
+    padding: 0 1em;
+    > li {
+      font-size: 0.725em;
+      line-height: 24px;
+      vertical-align: top;
+    }
+  }
+}
+
+
+/***************************************************
  * CONTAINER Section formating
  **************************************************/
 /* Reset the container */
@@ -225,59 +251,13 @@ body {
       margin-top:0;
     }
 }
+
 /***************************************************
- * QUICkLINKS Section formating
- **************************************************/
-.quickLinks {
-  clear: both;
-  overflow: auto;
-  margin: 0 auto;
-  position: relative;
-  width: 100%;
-  .breadcrumb {
-    background-color: #444B50;
-    border-radius: 0;
-    border-bottom: @border-width-thick @border-color;
-    list-style: none outside none;
-    margin-bottom: 0;
-    padding: 0 1em;
-    > li {
-      font-size: 0.725em;
-      line-height: 24px;
-      vertical-align: top;
-    }
-  }
-  
-}
-/***************************************************
- * SECTION Column Grid formating 
+ * ROW Column Grid formating 
  ***************************************************/
-section {
-  &.col-xs-4 {
-    background-color: @grid-bground;
-    border-top-left-radius: @border-radius;
-    border-top-right-radius: @border-radius;
-    -webkit-border-top-left-radius: @border-radius;
-    -webkit-border-top-right-radius: @border-radius;
-    float: left;
-    height: 450px;
-    margin: 0 11px;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    width: 300px;
-    
-    &.mid {
-      background-color: #000;
-      border-color: #000;
-    }
-    
-    .imageTabBox {
-      background-color: #2E2326;
-      border-bottom: @border-width-thin @border-color;
-      height: 150px;
-      width: 300px;
-    }
+
+.row {
+  section{
     h3 {
       background-color: @grid-bground-header;
       border-bottom: @border-width-thin @border-color;
@@ -288,10 +268,14 @@ section {
       margin: 0;
       padding: 0.652em 0 0 1em;
       width: auto;
+      &.brandLogo{
+        padding: 0.125em 0 0 0.525em;
+        background-color: #BDCEDC;
+      }
     }
     h3:hover {
-    background-color:#525a60;
-    }
+      background-color:#525a60;
+    } 
     h4 {
       color: #FFFFFF;
       font-style: italic;
@@ -299,31 +283,6 @@ section {
     }
     p {
       color:#ffffff;
-    }
-    .main-content {
-      padding: 0 1em;
-    }
-    .subBox {
-      background-color: @grid-bground-alt;
-      &.top {
-        background-color: @grid-bground-alt;
-        top: 0;
-        position: absolute;
-      }
-      &.bottom {
-        bottom: 0;
-        padding-bottom: 1.65em;
-        position: absolute;
-      }
-      h3 {
-        background-color: @grid-bground-alt;
-        color: #0095C0;
-      }
-      a {
-        h3:hover {
-          background-color:#a2b6c6;
-        }
-      }
     }
     footer {
       background-color: @grid-bground-footer;
@@ -340,6 +299,113 @@ section {
         > span:first-child {
           margin-right:0.425em;
         }
+      }
+    }
+  }
+  &.homePageRow {
+    section {
+      &.col-xs-4 {
+        background-color: @grid-bground;
+        border-top-left-radius: @border-radius;
+        border-top-right-radius: @border-radius;
+        -webkit-border-top-left-radius: @border-radius;
+        -webkit-border-top-right-radius: @border-radius;
+        float: left;
+        height: 450px;
+        margin: 0 11px;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 300px;
+        
+        &.mid {
+          background-color: #000;
+          border-color: #000;
+        }
+        
+        .imageTabBox {
+          background-color: #2E2326;
+          border-bottom: @border-width-thin @border-color;
+          height: 150px;
+          width: 300px;
+        }
+        .main-content {
+          padding: 0 1em;
+        }
+        .subBox {
+          background-color: @grid-bground-alt;
+          &.top {
+            background-color: @grid-bground-alt;
+            top: 0;
+            position: absolute;
+          }
+          &.bottom {
+            bottom: 0;
+            padding-bottom: 1.65em;
+            position: absolute;
+          }
+          h3 {
+            background-color: @grid-bground-alt;
+            color: #0095C0;
+          }
+          a {
+            h3:hover {
+              background-color:#a2b6c6;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.threeActive {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em;
+    section {
+      &.col-xs-1 {
+        background-color: @grid-bground;
+        overflow:hidden;
+        width: 109px;
+        height: 334px;
+      }
+      &.col-xs-3 {
+        background-color: @grid-bground;
+        border-top-left-radius: @border-radius;
+        border-top-right-radius: @border-radius;
+        -webkit-border-top-left-radius: @border-radius;
+        -webkit-border-top-right-radius: @border-radius;
+        float: left;
+        height: 334px;
+        margin: 0 11px;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 218px;
+      }
+    }
+  }
+  &.twoActive {
+    margin-left: -11px;
+    margin-top: 1em;
+    section {
+      &.col-xs-1 {
+        background-color:pink;
+        overflow:auto;
+      }
+      &.col-xs-3 {
+        background-color: @grid-bground;
+        background-color: @grid-bground;
+        border-top-left-radius: @border-radius;
+        border-top-right-radius: @border-radius;
+        -webkit-border-top-left-radius: @border-radius;
+        -webkit-border-top-right-radius: @border-radius;
+        float: left;
+        height: 334px;
+        margin: 0 11px;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 218px;
       }
     }
   }
