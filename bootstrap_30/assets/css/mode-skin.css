@@ -332,10 +332,6 @@ body {
   margin-left: -11px;
   margin-top: 1em;
 }
-.row.twoActive section.col-xs-1 {
-  background-color: pink;
-  overflow: auto;
-}
 .row.twoActive section.col-xs-3 {
   background-color: #2e3336;
   border-top-left-radius: 4px;

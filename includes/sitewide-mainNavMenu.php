@@ -5,7 +5,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="products.php"title="">
+		<a href="products.php" title="">
 			<span  class="<?php if (($nameX=="Products") || ($brandpage)) echo "activePage"; ?>">Products</span>
 		</a>
 	</li>

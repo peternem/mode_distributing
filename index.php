@@ -27,11 +27,110 @@ include 'includes/sitewide-globals.php';
         <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
         <script type="text/javascript" src="js/sitewide-scripts-slideshow.js"></script>
         <?php include_once("includes/analyticstracking.php") ?>
-
-
+	    <style media="all" type="text/css">
+	        #wrapper {
+	                position: relative;
+	            }
+	            #bannerPromo {
+	                display: none;
+	                position: absolute;
+	                background-color: #161616;
+	                border: 1px solid #444B50;
+	                left: 50%;
+	                top: 20%;
+	                margin-left: -300px;
+	                margin-top: -200px;
+	                width: 600px;
+	                height: 440px;
+	                z-index: 1000;
+	                -webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+	                -moz-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+	                box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+	            }
+	            #bannerPromo .banner-header {
+	                text-align: left;
+	                font-weight: bold;
+	                margin: 10px;
+	            }
+	            #bannerPromo .close-btn {
+	                background-color: #000000;
+	                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMtJREFUeNpi+P//PwMU9wJxPhIfF64D4jkwPkyw6z8C4DOkAkndBJgB7f8xATZDSrGo62ViYGB4x4AJJgBxPhK/CIi7sKh7DTO96D92kA/F2EAFchiAcM5/4kEFeiDCcBopmrEZQMiQCnT1TFgCRoIBN/iLIYJmYiMlXmghIRCr0Q3ApRkUM5n4DMGVEv9D0wbMAlxpoQ4UiDxYAqsSiPuQ+BOBuBiLuo8wGyYjm0pkZgLnFxaoSblA/B2Km/BEYwcQs4FthriKASDAACO1tJCWVmonAAAAAElFTkSuQmCC);
+	                background-position: 2px 2px;
+	                background-repeat: no-repeat;
+	                border: 1px solid #444B50;
+	                border-radius: 3px;
+	                cursor: pointer;
+	                height: 20px;
+	                position: absolute;
+	                right: 10px;
+	                top: 10px;
+	                width: 20px;
+	                
+	            }
+	
+	            #bannerPromo .close-btn:hover {
+	                background-color: #1D96C1;
+	                border: 1px solid #1D96C1;
+	            }
+	            
+	            #bannerPromo img {
+	                width: 100%;
+	                height: auto;
+	            }
+	            
+	            .partyPopup {
+	                background-color: #1C97C1;
+	                border: 1px solid #444B50; 
+	                color: #FFFFFF;
+	                border-radius: 3px;
+	                display: block;
+	                float: right;
+	                font-size: 12px;
+	                padding: 4px 8px;
+	                position: absolute;
+	                right: 20px;
+	                top: 63px;
+	                z-index: 1000;
+	            }
+	            .partyPopup:hover {
+	                background-color: #6AADC4;
+	                 color: #FFFFFF;
+	            }
+	
+	    </style>
+	    <script type="text/javascript">
+	        $(document).ready(function() {
+	                var bannerPromo = $("#bannerPromo");
+	                var popDelay = 1000;
+	                var fadeSpeed = 600;
+	                var timeOut = 15000;
+	
+	                $(bannerPromo).delay(popDelay).fadeIn(fadeSpeed);
+	
+	                setTimeout(function() {
+	                    bannerPromo.fadeOut(fadeSpeed);
+	                }, timeOut);
+	                
+	                $(".partyPopup").click(function() {
+	                    bannerPromo.slideToggle(fadeSpeed)
+	                });
+	                
+	                $(".close-btn").click(function() {
+	                    bannerPromo.slideToggle(fadeSpeed)
+	                });
+	            });
+	    </script>
     </head>
     <body>
         <div id="wrapper">
+            <a href="#" class="partyPopup"><span>NKBA PARTY INFO</span></a>
+        	<div id="bannerPromo" class="modal-dialog">
+                <div class="banner-header">
+                    NKBA PARTY
+                </div>
+                <div class="close-btn" alt="X" title="Close"></div>
+                <img src="images/MODE_BlackWhite_4X6.jpg" alt="NKBA Black and White Holliday Event" />
+            </div>
             <?php
 			include 'includes/sitewide-header.php';
             ?>
